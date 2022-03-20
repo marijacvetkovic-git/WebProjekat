@@ -75,7 +75,7 @@ export class Sala{
 
         //div za unos dogadjaja
 
-        let nizLabela =["Ime", "Prezime", "Broj telefona", "Datum", "Dogadjaj","Broj gostiju"];
+        let nizLabela =["Ime", "Prezime", "Broj_telefona", "Datum", "Dogadjaj","Broj_gostiju"];
         let nizTipova=["text", "text","text", "date", "text","number"];
 
 
@@ -120,7 +120,7 @@ export class Sala{
        divZaUnosiButton.appendChild(dugme);
         dugme.onclick = (ev) =>{
        
-                let imeInput = document.getElementById("Ime");
+                let imeInput = document.querySelector(".Ime");
                 let imeString = imeInput.value;
                 console.log(imeString);
                 if(imeString==="" || imeString.length > 50)
@@ -133,7 +133,7 @@ export class Sala{
                      imeK=imeString;
                 }
 
-                let prezimeInput = document.getElementById("Prezime");
+                let prezimeInput = document.querySelector(".Prezime");
                 let prezimeString = prezimeInput.value;
                 if(prezimeString==="" || prezimeString.length > 50)
                 {
@@ -145,7 +145,7 @@ export class Sala{
                     prezimeK=prezimeString;
                 }
               
-                let brojInput = document.getElementById("Broj telefona");
+                let brojInput = document.querySelector(".Broj_telefona");
                 let brojString = brojInput.value;
                     if(isNaN(brojString))  
                     {
@@ -159,7 +159,7 @@ export class Sala{
                     }
                     brTel=brojString;
 
-                let dogadjajInput = document.getElementById("Dogadjaj");
+                let dogadjajInput = document.querySelector(".Dogadjaj");
                 let dogadjajString = dogadjajInput.value;
              
                 if(dogadjajString==="")//treba i provera da li su sve cifre
@@ -168,7 +168,7 @@ export class Sala{
                     return;
                 }
                 dogadjaj=dogadjajString;
-                let gostiInput = document.getElementById("Broj gostiju");
+                let gostiInput = document.querySelector(".Broj_gostiju");
                 let gostiString = gostiInput.value;
                     if(gostiString<=0 || gostiString=="")
                     {
@@ -187,7 +187,7 @@ export class Sala{
             
            // let dogadjajj = new Dogadjaj();
            
-           let datumInput = document.getElementById("Datum");
+           let datumInput = document.querySelector(".Datum");
            let datumString = datumInput.value;
            const today = new Date();
            var neki = new Date(datumString);
